@@ -1,0 +1,18 @@
+.edit-div{
+    text-align: center;
+    width: 50%;
+    margin-left: 300px;
+    border: 2px solid black;
+    margin-top: 30px;
+    border-radius: 5px;
+    background-color: rgb(33 37 41 / 50%);
+    
+}
+.edit-form{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 85%;
+    margin-left: 35px;
+    font-weight: 800;
+    
+}
