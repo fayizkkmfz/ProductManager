@@ -83,7 +83,7 @@ function ProductTable() {
             </tr>
           </thead>
           <tbody>
-            {Products.filter((product) => product.title.toLowerCase().includes(SearchText)).map((item) => {
+            {Products.filter((product) => product.title.includes(SearchText)).map((item) => {
               return (
                 <tr className='table-row' key={item.id}>
                   <td className='table-data'>{item.id}</td>
