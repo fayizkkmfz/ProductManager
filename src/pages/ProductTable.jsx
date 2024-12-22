@@ -58,7 +58,6 @@ function ProductTable() {
       <div className='top-bg'>
       <ToastContainer
       />
-      <Link to={'/create'}><Button className='add_btn'>Add Product</Button></Link>
       <div className="search">
         <input
           className='search_input'
@@ -67,18 +66,21 @@ function ProductTable() {
           onChange={SearchValue}
         />
        
+      <Link to={'/create'}><Button className='add_btn'>Add Product</Button></Link>
       </div>
       
       </div>
-      <div className='product-table'>
-        <Table striped bordered hover>
+      <div className='table'>
+
+      
+        <Table >
           <thead>
             <tr className='table-row'>
               <th>Item Code</th>
               <th>Product Name</th>
               <th>Image</th>
-              <th>Category</th>
-              <th>Price</th>
+              <th className='category'>Category</th>
+              <th className='category'>Price</th>
               <th></th>
             </tr>
           </thead>
@@ -86,11 +88,11 @@ function ProductTable() {
             {Products.filter((product) => product.title.includes(SearchText)).map((item) => {
               return (
                 <tr className='table-row' key={item.id}>
-                  <td className='table-data'>{item.id}</td>
+                  <td>{item.id}</td>
                   <td>{item.title}</td>
                   <td><img style={{ height: "100px" }} src={item.thumbnail} alt="" /></td>
-                  <td>{item.category}</td>
-                  <td>{item.price}</td>
+                  <td className='category'>{item.category}</td>
+                  <td className='category'>{item.price}</td>
                   <td><IoIosEye style={{ cursor: "pointer" }} onClick={() => handleShow(item)} /><br />
                     <Link to={'/edit'}> <CiEdit onClick={() => gotoEdit(item)} />  </Link><br />
                     <TbTrashXFilled onClick={() => Delete(item)} style={{ cursor: "pointer" }} /></td>
@@ -99,14 +101,14 @@ function ProductTable() {
             })}
           </tbody>
         </Table>
-        
-      </div>
+        </div>
+      
       {ModalItem && (
-        <Modal show={show} onHide={handleClose}>
+        <Modal className='modal' show={show} onHide={handleClose}>
           <Modal.Header className='modal-head' closeButton>
             <Modal.Title className='fw-bolder' >{ModalItem.title}</Modal.Title>
           </Modal.Header>
-          <img style={{ height: "300px" }} src={ModalItem.thumbnail} alt="" />
+          <img src={ModalItem.thumbnail} alt="" />
           <Modal.Body className='modal-body'>{ModalItem.description}</Modal.Body>
           <Modal.Footer className='modal-head'>
             <h4 className='mr-10'>Rate : {ModalItem.price}</h4>
@@ -121,7 +123,7 @@ function ProductTable() {
           </Modal.Footer>
         </Modal>
       )}
-      <Modal  show={Deleteshow} onHide={handleDeleteClose}>
+      <Modal className='delete-modal'  show={Deleteshow} onHide={handleDeleteClose}>
         <Modal.Header className='delete-modal-head' closeButton>
           <Modal.Title>{deletingProduct.title}</Modal.Title>
         </Modal.Header>
@@ -141,7 +143,7 @@ function ProductTable() {
         </Modal.Footer>
       </Modal>
       <div className='about'>
-      <h5 className='mt-2 me-2 fw-light'>Made with by  </h5><FaCode className='code-icon'/><h5 className='text-center mt-2 ms-2'> <Link to={'https://github.com/fayizkkmfz'} style={{textDecoration:'none', color:'black'}}>fayizkkmfz</Link></h5>
+      <span>Made with by  </span><FaCode className='code-icon'/><span> <Link to={'https://github.com/fayizkkmfz'} target='_blank' style={{textDecoration:'none', color:'black'}}>fayizkkmfz</Link></span>
       </div>
     </>
   )

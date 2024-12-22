@@ -1,7 +1,7 @@
 .create-div{
     text-align: center;
-    width: 50%;
-    margin-left: 300px;
+    width: 75%;
+    margin: auto;
     border: 2px solid black;
     margin-top: 30px;
     border-radius: 5px;

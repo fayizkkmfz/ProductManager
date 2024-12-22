@@ -7,16 +7,17 @@
     background-color:rgb(228, 211, 224) ;
     
 }
+
 .search{
     text-align: center;
-    margin-left: 170px;
+    margin: auto;
     margin-bottom: 10px;
     
    
 }
 .search_input{
     height: 38px;
-    border: 2px solid green;
+    border: 2px solid #ec8181;
     border-radius: 6px;
     margin-right: 7px;
     text-align: center;
@@ -24,16 +25,13 @@
 .home-bg{
     background-color: tan;
 }
-.product-table{
-    text-align: center;
-    width: 96%;
-    margin-left: 25px;
-    border: 5px solid #065d71;
-    border-radius: 10px;
+table{
+    width: auto;
+    margin: auto;
 }
 .table-row{
-    
-    border: 15px solid rgb(170, 17, 137);
+    width: 100%;
+    border: 1px solid rgb(170, 17, 137);
     font-weight: 600;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -45,21 +43,104 @@
 .modal-body{
     font-weight: 600;
 }
+.modal img{
+    height: 300px;
+}
 .about{
     margin-top: 6px;
-    text-align: center;
     display: flex;
-    margin-left: 550px;
-   
-    
+    justify-content: center;
+
+
+}
+.about span{
+    font-size: 15px;
 }
 .code-icon{
     color: white;
-    width: 50px;
-    height: 50px;
+    width: 30px;
+    height: 30px;
 }
 .delete-modal-head{
     background-color:#ec8181;
     color: rgb(5, 5, 5);
     
 }
+.table-data{
+   width: 50px;
+   border: 1px solid rgb(170, 17, 137);
+}
+.table-row td{
+    border: 1px solid rgb(170, 17, 137);
+ }
+ .table-row th{
+    border: 1px solid rgb(170, 17, 137);
+ }
+@media screen and (max-width:767px){
+    
+    .category{
+        display: none;
+    }
+    .table-row{
+        border: 1px solid rgb(170, 17, 137);
+        font-weight: 500;
+        font-size: 12px;
+        width: 90%;
+        padding: 0;
+        
+    }
+    .table-row td{
+       font-size: 12px;
+       border: 1px solid rgb(170, 17, 137);
+    }
+    .table-row{
+        font-weight: 400;
+        
+    }
+    .add_btn{
+        width: 110px;
+        font-size: 14px;
+        margin-right: 0px;
+        float: unset;
+    
+        
+    }
+    .search{
+        text-align: center;
+        margin: auto;
+        margin-bottom: 10px;
+        
+       
+    }
+    .search_input{
+        padding: 0;
+        width: 115px;
+        height: 38px;
+        border: 2px solid black;
+        border-radius: 6px;
+        text-align: center;
+        margin-left: 0px;
+    }
+   
+    .top-bg{
+        width: auto;
+    }
+    .table{
+        width:320px;
+        margin: auto;
+    }
+    .modal{
+        width: 100%;
+        margin: auto;
+    }
+    .modal img{
+        height: 200px;
+    }
+    .delete-modal{
+        margin: auto;
+        font-size: 12px;
+        width: 100%;
+    }
+
+}
+
